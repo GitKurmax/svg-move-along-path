@@ -2,27 +2,27 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
 }
 
-svg {
-    display: block;
+svg#path {
     position: absolute;
-  }
+    opacity: 0;
+}
 
 .plane {
     width: 90px;
     height: 90px;
-
-    offset-path: path('M0 0 500 200 L600 700');
     offset-distance: 0%;
-    animation: red-ball 2s linear reverse infinite;
+    animation: fly 5s linear reverse infinite;
+    background-image: url('./plane-side-view-svgrepo-com.svg');
 }
 
-@keyframes red-ball {
+@keyframes fly {
     from {
       offset-distance: 0%;
     }
     to {
       offset-distance: 100%;
     }
-  }
+}
